@@ -43,3 +43,14 @@ function random_num($length)
 
 	return $text;
 }
+
+function get_users($con) {
+	$query = "SELECT * FROM users ORDER BY user_name ASC";
+	$result = mysqli_query($con, $query);
+
+	$users = [];
+	while($row = mysqli_fetch_assoc($result)){
+		$users[] = $row;
+	}
+	return $users;
+}
