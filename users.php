@@ -5,7 +5,7 @@ include 'db.php';
 $sql = "SELECT username, email FROM users ORDER BY username ASC";
 $result = $conn->query($sql);
 
-echo "<h2>Registered Users</h2>";
+echo "<h2>Registered Users in Asceding order</h2>";
 
 if ($result->num_rows > 0) {
     echo "<ol>";
